@@ -1,0 +1,65 @@
+﻿<Window x:Class="KURSOVAYA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KURSOVAYA"
+        mc:Ignorable="d"
+        Title="КолТаб" Height="450" Width="800"
+        xmlns:hc="https://handyorg.github.io/handycontrol">
+    <Grid  Background="{DynamicResource PrimaryBrush}">
+        <Grid Width="200" HorizontalAlignment="Left" >
+
+            <GroupBox Header="Що ви хочете зробити?">
+                <ListBox Name="mainChoise" SelectionChanged="mainChoise_SelectionChanged">
+                    <ListBoxItem>Общий подсчёт лекарств</ListBoxItem>
+                    <ListBoxItem>Назначение лекарств пациентам</ListBoxItem>
+                    <ListBoxItem>рвыофлвыф</ListBoxItem>
+                    <ListBoxItem>КНОПКА 1</ListBoxItem>
+                    <ListBoxItem>КНОПКА 2</ListBoxItem>
+                </ListBox>
+            </GroupBox>
+
+        </Grid>
+        <Grid Margin="203, 0,0,0">
+            <GroupBox Header="Общий подсчёт лекарств" Name="groupBox">
+                <Grid Name="groupBoxGrid" Background="{DynamicResource LightPrimaryBrush}">
+                    <Grid x:Name="box1" Visibility="Visible">
+                        <hc:ButtonGroup Margin="5,5,5,0">
+                            <Button x:Name="AddPill" Content="Додати запис" Click="AddPill_Click"/>
+                            <Button x:Name="DeletePill" Content="Видалити запис" Click="DeletePill_Click"/>
+                            <Button x:Name="EditPill" Content="Редагування запису" Click="EditPill_Click"/>
+                        </hc:ButtonGroup>
+                        <DataGrid Name="Pills"  Margin="0,40,0,0"  HeadersVisibility="All" AutoGenerateColumns="False" RowHeight="40" ColumnHeaderHeight="23" SelectionChanged="Pills_SelectionChanged">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Path=Code}" Header="Код"/>
+                                <DataGridTextColumn Binding="{Binding Path=Name}" Header="Назва"/>
+                                <DataGridTextColumn Binding="{Binding Path=Description}" Header="Опис"/>
+                                <DataGridTextColumn Binding="{Binding Path=Unit}" Header="Одиниця виміру"/>
+                                <DataGridTextColumn Binding="{Binding Path=Count}" Header="Кількість"/>
+                                <DataGridTextColumn Binding="{Binding Path=StorageCount}" Header="На складі"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                    </Grid>
+                    <Grid x:Name="box2" Visibility="Hidden">
+                        <Label>Коробка 2</Label>
+
+                    </Grid>
+                    <Grid x:Name="box3" Visibility="Hidden">
+                        <Label>Коробка 3</Label>
+
+                    </Grid>
+                    <Grid x:Name="box4" Visibility="Hidden">
+                        <Label>Коробка 4</Label>
+
+                    </Grid>
+                    <Grid x:Name="box5" Visibility="Hidden">
+                        <Label>Коробка 5</Label>
+
+                    </Grid>
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>
