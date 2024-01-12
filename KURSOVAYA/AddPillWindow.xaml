@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KURSOVAYA"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
-        Title="Додати запис" Height="310" Width="400">
+        Title="Додати запис" Height="330" Width="415">
     <Grid>
         <TextBlock Text="Код" Margin="25,10,0,0" FontSize="20"/>
         <TextBox x:Name="CodeBox" Height="25" Margin="150,10,10,0" VerticalAlignment="Top"/>

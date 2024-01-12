@@ -20,8 +20,8 @@ namespace KURSOVAYA
     /// Логика взаимодействия для AddPillWindow.xaml
     /// </summary>
     public partial class AddPillWindow : Window {
-        public int Code {
-            get { return int.Parse(CodeBox.Text); }
+        public string Code {
+            get { return CodeBox.Text; }
         }
         public string Name_ {
             get { return NameBox.Text; }

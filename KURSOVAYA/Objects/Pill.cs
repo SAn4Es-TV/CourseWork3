@@ -13,9 +13,9 @@ namespace KURSOVAYA.Objects
         public string Unit { get; set; }
         public int Count { get; set; }
         public int StorageCount { get; set; }
-        public int Code { get; set; }
+        public string Code { get; set; }
 
-        public Pill(string name, string description, string unit, int count, int storageCount, int code) {
+        public Pill(string name, string description, string unit, int count, int storageCount, string code) {
             Name = name;
             Description = description;
             Unit = unit;
